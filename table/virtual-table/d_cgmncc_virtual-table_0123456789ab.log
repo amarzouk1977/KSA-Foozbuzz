@@ -1,0 +1,102 @@
+2015-06-02 03:01:30,616   ibmiotf.device.Client      WARNING Unable to encrypt messages because TLSv1.2 is unavailable (MQTT over SSL requires at least Python v2.7.9 or 3.4 and openssl v1.0.1)
+2015-06-02 03:01:30,617   ibmiotf.device.Client      DEBUG   Connecting... (address = cgmncc.messaging.internetofthings.ibmcloud.com, port = 1883, clientId = d:cgmncc:virtual-table:0123456789ab, username = use-token-auth, password = -0?*Z302Ix1c1RI8FE)
+2015-06-02 03:01:30,788   ibmiotf.device.Client      DEBUG   Received CONNACK (0, 0)
+2015-06-02 03:01:30,788   ibmiotf.device.Client      INFO    Connected successfully: d:cgmncc:virtual-table:0123456789ab
+2015-06-02 03:01:30,801   ibmiotf.device.Client      DEBUG   Received SUBACK
+2015-06-02 03:06:39,035   ibmiotf.device.Client      WARNING Unable to encrypt messages because TLSv1.2 is unavailable (MQTT over SSL requires at least Python v2.7.9 or 3.4 and openssl v1.0.1)
+2015-06-02 03:06:39,035   ibmiotf.device.Client      DEBUG   Connecting... (address = cgmncc.messaging.internetofthings.ibmcloud.com, port = 1883, clientId = d:cgmncc:virtual-table:0123456789ab, username = use-token-auth, password = -0?*Z302Ix1c1RI8FE)
+2015-06-02 03:06:39,202   ibmiotf.device.Client      DEBUG   Received CONNACK (0, 0)
+2015-06-02 03:06:39,202   ibmiotf.device.Client      INFO    Connected successfully: d:cgmncc:virtual-table:0123456789ab
+2015-06-02 03:06:39,215   ibmiotf.device.Client      DEBUG   Received SUBACK
+2015-06-02 03:07:41,666   ibmiotf.device.Client      WARNING Unable to encrypt messages because TLSv1.2 is unavailable (MQTT over SSL requires at least Python v2.7.9 or 3.4 and openssl v1.0.1)
+2015-06-02 03:07:41,666   ibmiotf.device.Client      DEBUG   Connecting... (address = cgmncc.messaging.internetofthings.ibmcloud.com, port = 1883, clientId = d:cgmncc:virtual-table:0123456789ab, username = use-token-auth, password = -0?*Z302Ix1c1RI8FE)
+2015-06-02 03:07:41,821   ibmiotf.device.Client      DEBUG   Received CONNACK (0, 0)
+2015-06-02 03:07:41,821   ibmiotf.device.Client      INFO    Connected successfully: d:cgmncc:virtual-table:0123456789ab
+2015-06-02 03:07:41,834   ibmiotf.device.Client      DEBUG   Received SUBACK
+2015-06-02 03:08:17,626   ibmiotf.device.Client      WARNING Unable to encrypt messages because TLSv1.2 is unavailable (MQTT over SSL requires at least Python v2.7.9 or 3.4 and openssl v1.0.1)
+2015-06-02 03:08:17,627   ibmiotf.device.Client      DEBUG   Connecting... (address = cgmncc.messaging.internetofthings.ibmcloud.com, port = 1883, clientId = d:cgmncc:virtual-table:0123456789ab, username = use-token-auth, password = -0?*Z302Ix1c1RI8FE)
+2015-06-02 03:08:17,795   ibmiotf.device.Client      DEBUG   Received CONNACK (0, 0)
+2015-06-02 03:08:17,795   ibmiotf.device.Client      INFO    Connected successfully: d:cgmncc:virtual-table:0123456789ab
+2015-06-02 03:08:17,807   ibmiotf.device.Client      DEBUG   Received SUBACK
+2015-06-02 03:09:32,432   ibmiotf.device.Client      WARNING Unable to encrypt messages because TLSv1.2 is unavailable (MQTT over SSL requires at least Python v2.7.9 or 3.4 and openssl v1.0.1)
+2015-06-02 03:09:32,432   ibmiotf.device.Client      DEBUG   Connecting... (address = cgmncc.messaging.internetofthings.ibmcloud.com, port = 1883, clientId = d:cgmncc:virtual-table:0123456789ab, username = use-token-auth, password = -0?*Z302Ix1c1RI8FE)
+2015-06-02 03:09:32,578   ibmiotf.device.Client      DEBUG   Received CONNACK (0, 0)
+2015-06-02 03:09:32,578   ibmiotf.device.Client      INFO    Connected successfully: d:cgmncc:virtual-table:0123456789ab
+2015-06-02 03:09:32,591   ibmiotf.device.Client      DEBUG   Received SUBACK
+2015-06-02 03:10:09,179   ibmiotf.device.Client      WARNING Unable to encrypt messages because TLSv1.2 is unavailable (MQTT over SSL requires at least Python v2.7.9 or 3.4 and openssl v1.0.1)
+2015-06-02 03:10:09,179   ibmiotf.device.Client      DEBUG   Connecting... (address = cgmncc.messaging.internetofthings.ibmcloud.com, port = 1883, clientId = d:cgmncc:virtual-table:0123456789ab, username = use-token-auth, password = -0?*Z302Ix1c1RI8FE)
+2015-06-02 03:10:09,317   ibmiotf.device.Client      DEBUG   Received CONNACK (0, 0)
+2015-06-02 03:10:09,317   ibmiotf.device.Client      INFO    Connected successfully: d:cgmncc:virtual-table:0123456789ab
+2015-06-02 03:10:09,329   ibmiotf.device.Client      DEBUG   Received SUBACK
+2015-06-02 03:11:13,331   ibmiotf.device.Client      WARNING Unable to encrypt messages because TLSv1.2 is unavailable (MQTT over SSL requires at least Python v2.7.9 or 3.4 and openssl v1.0.1)
+2015-06-02 03:11:13,331   ibmiotf.device.Client      DEBUG   Connecting... (address = cgmncc.messaging.internetofthings.ibmcloud.com, port = 1883, clientId = d:cgmncc:virtual-table:0123456789ab, username = use-token-auth, password = -0?*Z302Ix1c1RI8FE)
+2015-06-02 03:11:13,466   ibmiotf.device.Client      DEBUG   Received CONNACK (0, 0)
+2015-06-02 03:11:13,466   ibmiotf.device.Client      INFO    Connected successfully: d:cgmncc:virtual-table:0123456789ab
+2015-06-02 03:11:13,479   ibmiotf.device.Client      DEBUG   Received SUBACK
+2015-06-02 03:11:50,223   ibmiotf.device.Client      WARNING Unable to encrypt messages because TLSv1.2 is unavailable (MQTT over SSL requires at least Python v2.7.9 or 3.4 and openssl v1.0.1)
+2015-06-02 03:11:50,224   ibmiotf.device.Client      DEBUG   Connecting... (address = cgmncc.messaging.internetofthings.ibmcloud.com, port = 1883, clientId = d:cgmncc:virtual-table:0123456789ab, username = use-token-auth, password = -0?*Z302Ix1c1RI8FE)
+2015-06-02 03:11:50,372   ibmiotf.device.Client      DEBUG   Received CONNACK (0, 0)
+2015-06-02 03:11:50,372   ibmiotf.device.Client      INFO    Connected successfully: d:cgmncc:virtual-table:0123456789ab
+2015-06-02 03:11:50,384   ibmiotf.device.Client      DEBUG   Received SUBACK
+2015-06-02 03:17:00,028   ibmiotf.device.Client      WARNING Unable to encrypt messages because TLSv1.2 is unavailable (MQTT over SSL requires at least Python v2.7.9 or 3.4 and openssl v1.0.1)
+2015-06-02 03:17:00,029   ibmiotf.device.Client      DEBUG   Connecting... (address = cgmncc.messaging.internetofthings.ibmcloud.com, port = 1883, clientId = d:cgmncc:virtual-table:0123456789ab, username = use-token-auth, password = -0?*Z302Ix1c1RI8FE)
+2015-06-02 03:17:00,198   ibmiotf.device.Client      DEBUG   Received CONNACK (0, 0)
+2015-06-02 03:17:00,198   ibmiotf.device.Client      INFO    Connected successfully: d:cgmncc:virtual-table:0123456789ab
+2015-06-02 03:17:00,214   ibmiotf.device.Client      DEBUG   Received SUBACK
+2015-06-02 03:18:06,081   ibmiotf.device.Client      WARNING Unable to encrypt messages because TLSv1.2 is unavailable (MQTT over SSL requires at least Python v2.7.9 or 3.4 and openssl v1.0.1)
+2015-06-02 03:18:06,081   ibmiotf.device.Client      DEBUG   Connecting... (address = cgmncc.messaging.internetofthings.ibmcloud.com, port = 1883, clientId = d:cgmncc:virtual-table:0123456789ab, username = use-token-auth, password = -0?*Z302Ix1c1RI8FE)
+2015-06-02 03:18:06,245   ibmiotf.device.Client      DEBUG   Received CONNACK (0, 0)
+2015-06-02 03:18:06,245   ibmiotf.device.Client      INFO    Connected successfully: d:cgmncc:virtual-table:0123456789ab
+2015-06-02 03:18:06,258   ibmiotf.device.Client      DEBUG   Received SUBACK
+2015-06-02 03:19:12,703   ibmiotf.device.Client      WARNING Unable to encrypt messages because TLSv1.2 is unavailable (MQTT over SSL requires at least Python v2.7.9 or 3.4 and openssl v1.0.1)
+2015-06-02 03:19:12,703   ibmiotf.device.Client      DEBUG   Connecting... (address = cgmncc.messaging.internetofthings.ibmcloud.com, port = 1883, clientId = d:cgmncc:virtual-table:0123456789ab, username = use-token-auth, password = -0?*Z302Ix1c1RI8FE)
+2015-06-02 03:19:12,866   ibmiotf.device.Client      DEBUG   Received CONNACK (0, 0)
+2015-06-02 03:19:12,867   ibmiotf.device.Client      INFO    Connected successfully: d:cgmncc:virtual-table:0123456789ab
+2015-06-02 03:19:12,879   ibmiotf.device.Client      DEBUG   Received SUBACK
+2015-06-02 03:20:15,056   ibmiotf.device.Client      WARNING Unable to encrypt messages because TLSv1.2 is unavailable (MQTT over SSL requires at least Python v2.7.9 or 3.4 and openssl v1.0.1)
+2015-06-02 03:20:15,056   ibmiotf.device.Client      DEBUG   Connecting... (address = cgmncc.messaging.internetofthings.ibmcloud.com, port = 1883, clientId = d:cgmncc:virtual-table:0123456789ab, username = use-token-auth, password = -0?*Z302Ix1c1RI8FE)
+2015-06-02 03:20:15,203   ibmiotf.device.Client      DEBUG   Received CONNACK (0, 0)
+2015-06-02 03:20:15,203   ibmiotf.device.Client      INFO    Connected successfully: d:cgmncc:virtual-table:0123456789ab
+2015-06-02 03:20:15,215   ibmiotf.device.Client      DEBUG   Received SUBACK
+2015-06-02 03:21:10,572   ibmiotf.device.Client      WARNING Unable to encrypt messages because TLSv1.2 is unavailable (MQTT over SSL requires at least Python v2.7.9 or 3.4 and openssl v1.0.1)
+2015-06-02 03:21:10,573   ibmiotf.device.Client      DEBUG   Connecting... (address = cgmncc.messaging.internetofthings.ibmcloud.com, port = 1883, clientId = d:cgmncc:virtual-table:0123456789ab, username = use-token-auth, password = -0?*Z302Ix1c1RI8FE)
+2015-06-02 03:21:10,714   ibmiotf.device.Client      DEBUG   Received CONNACK (0, 0)
+2015-06-02 03:21:10,714   ibmiotf.device.Client      INFO    Connected successfully: d:cgmncc:virtual-table:0123456789ab
+2015-06-02 03:21:10,727   ibmiotf.device.Client      DEBUG   Received SUBACK
+2015-06-02 03:23:01,928   ibmiotf.device.Client      WARNING Unable to encrypt messages because TLSv1.2 is unavailable (MQTT over SSL requires at least Python v2.7.9 or 3.4 and openssl v1.0.1)
+2015-06-02 03:23:01,928   ibmiotf.device.Client      DEBUG   Connecting... (address = cgmncc.messaging.internetofthings.ibmcloud.com, port = 1883, clientId = d:cgmncc:virtual-table:0123456789ab, username = use-token-auth, password = -0?*Z302Ix1c1RI8FE)
+2015-06-02 03:23:02,094   ibmiotf.device.Client      DEBUG   Received CONNACK (0, 0)
+2015-06-02 03:23:02,094   ibmiotf.device.Client      INFO    Connected successfully: d:cgmncc:virtual-table:0123456789ab
+2015-06-02 03:23:02,107   ibmiotf.device.Client      DEBUG   Received SUBACK
+2015-06-02 03:23:08,977   ibmiotf.device.Client      DEBUG   Sending event status with data "1"
+2015-06-02 03:23:08,977   ibmiotf.device.Client      DEBUG   Sending PUBLISH (dFalse, q0, r0, m2, 'iot-2/evt/status/fmt/json', ... (52 bytes)
+2015-06-02 03:25:27,937   ibmiotf.device.Client      WARNING Unable to encrypt messages because TLSv1.2 is unavailable (MQTT over SSL requires at least Python v2.7.9 or 3.4 and openssl v1.0.1)
+2015-06-02 03:25:27,937   ibmiotf.device.Client      DEBUG   Connecting... (address = cgmncc.messaging.internetofthings.ibmcloud.com, port = 1883, clientId = d:cgmncc:virtual-table:0123456789ab, username = use-token-auth, password = -0?*Z302Ix1c1RI8FE)
+2015-06-02 03:25:28,094   ibmiotf.device.Client      DEBUG   Received CONNACK (0, 0)
+2015-06-02 03:25:28,095   ibmiotf.device.Client      INFO    Connected successfully: d:cgmncc:virtual-table:0123456789ab
+2015-06-02 03:25:28,108   ibmiotf.device.Client      DEBUG   Received SUBACK
+2015-06-02 03:25:32,212   ibmiotf.device.Client      DEBUG   Sending event status with data "1"
+2015-06-02 03:25:32,213   ibmiotf.device.Client      DEBUG   Sending PUBLISH (dFalse, q0, r0, m2, 'iot-2/evt/status/fmt/json', ... (52 bytes)
+2015-06-02 03:28:57,932   ibmiotf.device.Client      WARNING Unable to encrypt messages because TLSv1.2 is unavailable (MQTT over SSL requires at least Python v2.7.9 or 3.4 and openssl v1.0.1)
+2015-06-02 03:28:57,932   ibmiotf.device.Client      DEBUG   Connecting... (address = cgmncc.messaging.internetofthings.ibmcloud.com, port = 1883, clientId = d:cgmncc:virtual-table:0123456789ab, username = use-token-auth, password = -0?*Z302Ix1c1RI8FE)
+2015-06-02 03:28:58,137   ibmiotf.device.Client      DEBUG   Received CONNACK (0, 0)
+2015-06-02 03:28:58,137   ibmiotf.device.Client      INFO    Connected successfully: d:cgmncc:virtual-table:0123456789ab
+2015-06-02 03:28:58,150   ibmiotf.device.Client      DEBUG   Received SUBACK
+2015-06-02 03:29:02,673   ibmiotf.device.Client      DEBUG   Sending event status with data "1"
+2015-06-02 03:29:02,673   ibmiotf.device.Client      DEBUG   Sending PUBLISH (dFalse, q0, r0, m2, 'iot-2/evt/status/fmt/json', ... (52 bytes)
+2015-06-02 03:29:40,028   ibmiotf.device.Client      WARNING Unable to encrypt messages because TLSv1.2 is unavailable (MQTT over SSL requires at least Python v2.7.9 or 3.4 and openssl v1.0.1)
+2015-06-02 03:29:40,029   ibmiotf.device.Client      DEBUG   Connecting... (address = cgmncc.messaging.internetofthings.ibmcloud.com, port = 1883, clientId = d:cgmncc:virtual-table:0123456789ab, username = use-token-auth, password = -0?*Z302Ix1c1RI8FE)
+2015-06-02 03:29:40,163   ibmiotf.device.Client      DEBUG   Received CONNACK (0, 0)
+2015-06-02 03:29:40,163   ibmiotf.device.Client      INFO    Connected successfully: d:cgmncc:virtual-table:0123456789ab
+2015-06-02 03:29:40,176   ibmiotf.device.Client      DEBUG   Received SUBACK
+2015-06-02 03:30:34,692   ibmiotf.device.Client      WARNING Unable to encrypt messages because TLSv1.2 is unavailable (MQTT over SSL requires at least Python v2.7.9 or 3.4 and openssl v1.0.1)
+2015-06-02 03:30:34,692   ibmiotf.device.Client      DEBUG   Connecting... (address = cgmncc.messaging.internetofthings.ibmcloud.com, port = 1883, clientId = d:cgmncc:virtual-table:0123456789ab, username = use-token-auth, password = -0?*Z302Ix1c1RI8FE)
+2015-06-02 03:30:34,867   ibmiotf.device.Client      DEBUG   Received CONNACK (0, 0)
+2015-06-02 03:30:34,867   ibmiotf.device.Client      INFO    Connected successfully: d:cgmncc:virtual-table:0123456789ab
+2015-06-02 03:30:34,879   ibmiotf.device.Client      DEBUG   Received SUBACK
+2015-06-02 03:30:41,390   ibmiotf.device.Client      DEBUG   Sending event status with data "1"
+2015-06-02 03:30:41,390   ibmiotf.device.Client      DEBUG   Sending PUBLISH (dFalse, q0, r0, m2, 'iot-2/evt/status/fmt/json', ... (52 bytes)
+2015-06-02 03:30:44,563   ibmiotf.device.Client      DEBUG   Sending event status with data "2"
+2015-06-02 03:30:44,563   ibmiotf.device.Client      DEBUG   Sending PUBLISH (dFalse, q0, r0, m3, 'iot-2/evt/status/fmt/json', ... (52 bytes)
+2015-06-02 03:30:47,248   ibmiotf.device.Client      DEBUG   Sending event status with data "0"
+2015-06-02 03:30:47,248   ibmiotf.device.Client      DEBUG   Sending PUBLISH (dFalse, q0, r0, m4, 'iot-2/evt/status/fmt/json', ... (52 bytes)

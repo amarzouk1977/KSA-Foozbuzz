@@ -1,0 +1,12 @@
+applications:
+- services:
+  - austinfoosball-nodered-cloudantNoSQLDB
+  - text_to_speech_austinfoosbuzz
+  disk_quota: 1024M
+  host: austin-foosbuzz
+  name: austin-foosbuzz
+  command: node app.js
+  path: .
+  domain: mybluemix.net
+  instances: 1
+  memory: 512M
