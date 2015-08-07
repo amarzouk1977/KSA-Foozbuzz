@@ -301,8 +301,6 @@ section.players {
 	text-align: center;
 }
 #scoreboard {
-	/* width: 350px; */
-	/* height: 150px; */
 	background-color: #000;
 	border: 1px #A4A4A4 solid;
 	-webkit-border-radius: 10px;
@@ -474,7 +472,5 @@ section.players {
 }
 #nameOne {
 	display: none;
-}
-}splay: none;
 }
 }

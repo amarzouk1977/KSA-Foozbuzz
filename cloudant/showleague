@@ -1,0 +1,64 @@
+{
+  "_id": "_design/showleague",
+  "_rev": "40-78ce8beaa0320f87167b1d749320e88c",
+  "views": {
+    "showall": {
+      "map": "function(doc) { if(doc.gameID){ emit(doc.gameID, doc.isActive, doc.goalsTeamTwo, doc.goalsTeamOne)}}"
+    },
+    "playerData": {
+      "map": "function(doc) {\n    if (doc.id) {\n        emit(doc.id, doc._rev);\n    }\n}"
+    },
+    "export": {
+      "map": "function(doc) {\n    if(doc.userTeamTwo && doc.userTeamOne){\n        emit({\"gameID\":doc.gameID, \"userTeamTwo\":doc.userTeamTwo, \"goalsTeamTwo\":doc.goalsTeamTwo, \"userTeamOne\":doc.userTeamOne, \"goalsTeamOne\":doc.goalsTeamOne}, doc.timestamp);\n    }\n}"
+    },
+    "league": {
+      "reduce": "_sum",
+      "map": "function(doc) {\n    if(doc.gameID && !doc.isActive){\n        winTeamTwo=0;\n        winTeamOne=0;\n        if(doc.goalsTeamTwo==5){\n        emit(doc.userTeamTwo,winTeamTwo++) ;   \n        }\n        if(doc.goalsTeamOne==5){\n        emit(doc.userTeamOne,winTeamOne++) ;   \n        }\n        emit(doc.userTeamOne,[doc.goalsTeamOne, doc.goalsTeamTwo, (doc.goalsTeamOne-doc.goalsTeamTwo),winTeamOne]);\n        emit(doc.userTeamTwo,[doc.goalsTeamTwo, doc.goalsTeamOne, (doc.goalsTeamTwo-doc.goalsTeamOne),winTeamTwo]);\n    }\n}"
+    },
+    "getBU": {
+      "reduce": "_sum",
+      "map": "function(doc) {\n    if(doc.gameID && !doc.isActive && (doc.userTeamTwoID || doc.userTeamOneID) && doc.buTeamOne && doc.buTeamTwo  && doc.buTeamTwo != \"Choose Business Unit\" && doc.buTeamOne != \"Choose Business Unit\" && doc.timestamp > \"Wed Apr 08 2015 19:50:27 GMT+0200 (W. Europe Daylight Time)\" ){\n        winTeamTwo=0;\n        winTeamOne=0;\n        loseTeamTwo=0;\n        loseTeamOne=0;\n        if(doc.goalsTeamTwo==5 && doc.buTeamOne != doc.buTeamTwo){\n        emit(doc.buTeamTwo,winTeamTwo++,loseTeamOne++) ;\n        }\n        if(doc.goalsTeamOne==5 && doc.buTeamOne != doc.buTeamTwo){\n        emit(doc.buTeamOne,winTeamOne++,loseTeamTwo++) ;   \n        }\n        emit([doc.buTeamOne,],[doc.goalsTeamOne, doc.goalsTeamTwo, (doc.goalsTeamOne-doc.goalsTeamTwo),winTeamOne,loseTeamOne,(winTeamOne*3-loseTeamOne*2),(winTeamOne+loseTeamOne)]);\n        emit([doc.buTeamTwo,],[doc.goalsTeamTwo, doc.goalsTeamOne, (doc.goalsTeamTwo-doc.goalsTeamOne),winTeamTwo,loseTeamTwo,(winTeamTwo*3-loseTeamTwo*2),(winTeamTwo+loseTeamTwo)]);\n    }\n}"
+    },
+    "goalsByColor": {
+      "reduce": "_sum",
+      "map": "function(doc) {\n    if(doc.gameID && (doc.userTeamTwo != doc.userTeamOne) ){\n        emit(doc.gameID, {\"teamOne\": doc.goalsTeamOne, \"teamTwo\": doc.goalsTeamTwo});\n                    }\n}"
+    },
+    "winsByColor": {
+      "map": "function(doc) {\n    if(doc.gameID && !doc.isActive && (doc.userTeamTwoID || doc.userTeamOneID) ){\n        winTeamTwo=0;\n        winTeamOne=0;\n        loseTeamTwo=0;\n        loseTeamOne=0;\n        if(doc.goalsTeamTwo==5 && doc.userTeamOneID != doc.userTeamTwoID){\n        emit(\"TeamTwo\", [doc.gameID, doc.timestamp]) ;\n        \n        }\n        if(doc.goalsTeamOne==5 && doc.userTeamOneID != doc.userTeamTwoID){\n        emit(\"TeamOne\", [doc.gameID, doc.timestamp]) ;   \n        }\n        //emit(\"TeamOne\",winTeamOne, doc.timestamp);\n        //emit(\"TeamTwo\",winTeamTwo, doc.timestamp);\n    }\n}"
+    },
+    "goals": {
+      "reduce": "_count",
+      "map": "function(doc) {\n    if(doc.userTeamTwo && doc.userTeamOne){\n        emit([doc.gameID, doc.timestamp ], doc.goalsTeamOne);\n        emit([doc.gameID, doc.timestamp], doc.goalsTeamTwo);\n    }\n}"
+    },
+    "playedmatches": {
+      "map": "function(doc) {\nfunction msToTime(s) {\n  var ms = s % 1000;\n  s = (s - ms) / 1000;\n  var secs = s % 60;\n  s = (s - secs) / 60;\n  var mins = s % 60;\n  var hrs = (s - mins) / 60;\n\n  return  hrs + ':' + mins + ':' + secs + '.' + ms;\n}\n    \n    \n    \n    if(doc.userTeamTwo && doc.userTeamOne && doc.userTeamTwo != doc.userTeamOne){\n        if(doc.goalsTeamOne==1 && doc.goalsTeamTwo===0 || doc.goalsTeamTwo ==1 && doc.goalsTeamOne ===0){{\n        //if(doc.userTeamTwo != 'anonymous' | doc.userTeamOne != 'incognito'){\n        var goaltime = new Date(doc.timestamp);\n        var starttime = new Date(doc.startTime);\n        var timedif = Math.abs(goaltime - starttime);\n        var newtimedif = msToTime(timedif);\n        emit(doc.gameID, newtimedif);\n        //}\n        }}\n    }\n}"
+    },
+    "firstgoal": {
+      "map": "function(doc) {\nfunction msToTime(s) {\n  var ms = s % 1000;\n  s = (s - ms) / 1000;\n  var secs = s % 60;\n  s = (s - secs) / 60;\n  var mins = s % 60;\n  secs = secs + (mins *60);\n\n  return  secs;\n}\n    \n    \n    \n    if(doc.userTeamTwo && doc.userTeamOne && doc.userTeamTwo != doc.userTeamOne){\n        if(doc.goalsTeamOne==1 && doc.goalsTeamTwo===0 || doc.goalsTeamTwo ==1 && doc.goalsTeamOne ===0){{\n        if(doc.userTeamTwo != 'anonymous' | doc.userTeamOne != 'incognito'){\n        var goaltime = new Date(doc.timestamp);\n        var starttime = new Date(doc.startTime);\n        var timedif = Math.abs(goaltime - starttime);\n        var newtimedif = msToTime(timedif);\n\n        if(doc.goalsTeamOne == 1) {\n            emit([doc.gameID, doc.userTeamOne, doc.userTeamTwo, \"goalteamOne\"], newtimedif);\n        }\n        if(doc.goalsTeamTwo == 1) {\n            emit([doc.gameID, doc.userTeamOne, doc.userTeamTwo, \"goalteamTwo\"], newtimedif);\n        }\n        }}\n    }}\n}\n//hello"
+    },
+    "firstGoalAVG": {
+      "reduce": "function(keys, values){\n    avg = Math.round(sum(values)/values.length);\n   // emit(sum(values), values.length);\n    return min(values);\n}",
+      "map": "function(doc) {\nfunction msToTime(s) {\n  var ms = s % 1000;\n  s = (s - ms) / 1000;\n  var secs = s % 60;\n  s = (s - secs) / 60;\n  var mins = s % 60;\n  secs = secs + (mins *60);\n\n  return  secs;\n}\n    \n    \n    \n    if(doc.gameID > 1 && doc.userTeamTwo && doc.userTeamOne && doc.userTeamTwo != doc.userTeamOne){\n        if(doc.goalsTeamOne==1 && doc.goalsTeamTwo===0 || doc.goalsTeamTwo ==1 && doc.goalsTeamOne ===0){{\n        if(doc.userTeamTwo != 'anonymous' | doc.userTeamOne != 'incognito'){\n        var goaltime = new Date(doc.timestamp);\n        var starttime = new Date(doc.startTime);\n        var timedif = Math.abs(goaltime - starttime);\n        var newtimedif = msToTime(timedif);\n\n        if(doc.goalsTeamOne == 1) {\n            emit([doc.gameID, doc.userTeamOne, doc.userTeamTwo, \"goalteamOne\"], newtimedif);\n        }\n        if(doc.goalsTeamTwo == 1) {\n            emit([doc.gameID, doc.userTeamOne, doc.userTeamTwo, \"goalteamTwo\"], newtimedif);\n        }\n        }}\n    }}\n}\n//hello"
+    },
+    "leaguebugfix": {
+      "reduce": "_sum",
+      "map": "function(doc) {\n \n}"
+    },
+    "testview": {
+      "reduce": "_sum",
+      "map": "function(doc) {\n    if (doc.gameID\n      && (doc.userTeamTwoID || doc.userTeamOneID) \n      && (doc.goalsTeamOne !== 0 || doc.goalsTeamTwo !==0)\n      && doc.isActive === false) {\n        winTeamTwo=0;\n        winTeamOne=0;\n        loseTeamTwo=0;\n        loseTeamOne=0;\n        if (doc.goalsTeamTwo == 5 \n            && doc.userTeamOneID != doc.userTeamTwoID) {\n            emit(doc.userTeamTwo,winTeamTwo++,loseTeamOne++) ;\n        }\n        if (doc.goalsTeamOne == 5 \n            && doc.userTeamOneID != doc.userTeamTwoID) {\n        emit(doc.userTeamOne,winTeamOne++,loseTeamTwo++) ;   \n        }\n        emit([doc.userTeamOneID, doc.userTeamOne,doc.userTeamOneComp,doc.userTeamOnePhoto],[doc.goalsTeamOne, doc.goalsTeamTwo, (doc.goalsTeamOne-doc.goalsTeamTwo),winTeamOne,loseTeamOne,(winTeamOne*3-loseTeamOne*2),(winTeamOne+loseTeamOne)]);\n        emit([doc.userTeamTwoID, doc.userTeamTwo,doc.userTeamTwoComp,doc.userTeamTwoPhoto],[doc.goalsTeamTwo, doc.goalsTeamOne, (doc.goalsTeamTwo-doc.goalsTeamOne),winTeamTwo,loseTeamTwo,(winTeamTwo*3-loseTeamTwo*2),(winTeamTwo+loseTeamTwo)]);\n    }\n}"
+    },
+    "ActiveGames": {
+      "map": "function(doc) {\n    test = 4;\n    if (doc.UserTeamTwo !== null){\n        emit(doc.UserTeamTwo, doc.UserTeamTwo, doc.UserTeamTwo);\n    }\n}"
+    },
+    "revTest": {
+      "map": "function(doc) {\n    if (doc.id) {\n        emit(doc.id, doc._rev);\n    }\n}"
+    }
+  },
+  "indexes": {
+    "personalgamedata": {
+      "analyzer": "standard",
+      "index": "function(doc){\n index(\"name\", doc.name);\n}"
+    }
+  }
+}

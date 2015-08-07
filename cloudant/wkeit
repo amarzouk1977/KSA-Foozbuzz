@@ -1,0 +1,13 @@
+{
+  "_id": "_design/wkeit",
+  "_rev": "6-01bf577e6aa6c22fda3b5e3654a305b9",
+  "views": {
+    "wkeitgoals": {
+      "reduce": "_sum",
+      "map": "function(doc) {\n    if(doc.userTeamTwo && doc.userTeamOne && !doc.isActive){\n          emit([\"teamTwo\",doc.gameID], doc.goalsTeamTwo);  \n          emit([\"teamOne\",doc.gameID], doc.goalsTeamOne); \n        \n    }\n}"
+    },
+    "allgames": {
+      "map": "function(doc) {\n        emit(doc.gameID, doc);\n}"
+    }
+  }
+}

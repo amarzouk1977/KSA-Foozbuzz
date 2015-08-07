@@ -1,0 +1,11 @@
+{
+  "_id": "_design/getgameid",
+  "_rev": "12-a9cf063986e8d1343d66ec4118366c0c",
+  "views": {
+    "getgameid": {
+      "map": "function(doc) {\n    if (doc.gameID) {\n        emit(doc.gameID, doc.gameID);\n    }\n}",
+      "reduce": "_stats"
+    }
+  },
+  "indexes": {}
+}
