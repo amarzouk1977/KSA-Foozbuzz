@@ -386,6 +386,8 @@ app.get('/storeGoals', /* @callback */ function(req, res) {
 			console.log("ERR. Savegoal not defined: " + location);
 		}
 	}
+	
+	res.send('GET request completed.');
 });
 
 ///Send league to be displayed on the leaderboard

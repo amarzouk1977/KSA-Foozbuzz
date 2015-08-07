@@ -1,0 +1,21 @@
+{
+  "_id": "0a83d9a5edb4faf5d4f7e29af23750b3",
+  "_rev": "1-6a4fa8f0a2dd37cd8e842178c84fb929",
+  "gameID": 1,
+  "userTeamTwo": "anonymous",
+  "userTeamOne": "incognito",
+  "goalsTeamTwo": 5,
+  "goalsTeamOne": 1,
+  "location": "Austin",
+  "timestamp": "Thu Aug 06 2015 19:46:27 GMT+0000 (UTC)",
+  "startTime": "Thu Aug 06 2015 19:36:11 GMT+0000 (UTC)",
+  "isActive": false,
+  "userTeamOneComp": "",
+  "userTeamTwoComp": "",
+  "userTeamOnePhoto": "",
+  "userTeamTwoPhoto": "",
+  "userTeamOneHead": "",
+  "userTeamTwoHead": "",
+  "userTeamTwoID": "",
+  "userTeamOneID": ""
+}

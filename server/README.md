@@ -4,9 +4,13 @@ Bluemix and requires a number of services to be bound to the
 application.
 
 ##Services required:
-- Single Sign On
-  - SSO must be preconfigured prior to binding to the app.
 - Cloudant Database
-- Others?
+- Watson Text to Speech
 
-###More notes on how to deploy the application should go here.
+###Server Updates
+- Update roughly like 84 to change the location
+
+###Client Updates
+- Edit /public/js/main.js and change the team colors in the TODO
+- Edit /public/css/main.css to change team colors
+- Register a javascript app with LinkedIn and update /public/index.ejs to change the key to your LinkedIn app key
